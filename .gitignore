@@ -1,0 +1,5 @@
+# Dependências Node
+node_modules/
+
+# Arquivos criados automaticamente
+package-lock.json
