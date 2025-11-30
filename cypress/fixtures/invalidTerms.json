@@ -1,0 +1,11 @@
+{
+  "noResults": "xyzasd123nada",
+  "specialChars": [
+    "<script>alert(1)</script>",
+    "\"><img src=x onerror=alert(1)>",
+    "'; DROP TABLE wp_posts; --",
+    "😀🔥💣💀",
+    "漢字テスト",
+    "%3Cscript%3Ealert(123)%3C%2Fscript%3E"
+  ]
+}

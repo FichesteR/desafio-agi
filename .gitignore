@@ -3,3 +3,5 @@ node_modules/
 
 # Arquivos criados automaticamente
 package-lock.json
+cypress/videos
+cypress/screenshots
