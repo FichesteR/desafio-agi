@@ -107,12 +107,3 @@ Este projeto entrega: ✔ 5 cenários avançados\
 ✔ Arquitetura modular\
 ✔ CI/CD funcional\
 ✔ Execução multiplataforma
-
-Pronto para avaliação técnica.
-
-------------------------------------------------------------------------
-
-# 🤝 Contato
-
-Disponível para esclarecimentos, vídeo de execução e explicação de
-decisões técnicas.

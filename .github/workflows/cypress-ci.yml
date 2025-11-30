@@ -11,38 +11,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout do repo
+      # 1. Faz checkout do código
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Setup Node (versão atual estável)
+      # 2. Instala Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "18"
 
-      # 3. Instalar dependências
+      # 3. Instala dependências do projeto
       - name: Install Dependencies
         run: npm ci
 
-      # 4. Rodar os testes do Cypress (modo headless)
+      # 4. Executa o Cypress em modo headless
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         with:
           record: false
-          start: npm test
+          config-file: cypress.config.js
 
-      # 5. Upload de artefatos (screenshots e vídeos)
+      # 5. Upload de screenshots em caso de falha
       - name: Upload Screenshots
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-screenshots
+          name: screenshots
           path: cypress/screenshots
 
+      # 6. Upload de vídeos sempre
       - name: Upload Videos
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-videos
+          name: videos
           path: cypress/videos
